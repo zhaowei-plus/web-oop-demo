@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KeyDown Event</title>
+</head>
+<body>
+  <button id="buttonClick">按钮</button>
+  <script type="module">
+    import { onClick, onKeydown } from './index.js'
+
+    window.addEventListener('keydown', (event) => {
+      event.stopPropagation()
+      event.preventDefault()
+
+      onKeydown(event)
+    })
+  </script>
+</body>
+</html>
